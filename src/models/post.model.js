@@ -5,8 +5,10 @@ const postSchema= new mongoose.Schema({
  media:[{type:String, required:true}],
  caption:{type:String,required:false},
  Location:{type:String,required:false},
- music:{type:String, required:true},
+ music:{type:String, required:false},
 },{
     timestamps:true,
-    versionKey:true,
+    
 })
+const Post= mongoose.model("post",postSchema);
+module.exports=Post

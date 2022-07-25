@@ -4,7 +4,7 @@ const User= require("../models/user.model")
 const router= express.Router();
  const path= require("path")
  const {body, validationResult}=require("express-validator")
-const transporter=require("../configs/mail")
+ 
 router.post("/",
 body("email").not().isEmpty().withMessage("Please enter email ").bail()
 .isEmail().withMessage("Please enter a valid email address").bail().custom(async(value)=>{
