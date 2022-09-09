@@ -1,8 +1,8 @@
 const mongoose=require("mongoose")
 
 const ComentSchema=new mongoose.Schema({
-   comment:{type:toString, required:true},
-   userId:{type:mongoose.Types.ObjectId,ref:"post",required:true},
+   comment:{type:String, required:true},
+   userId:{type:mongoose.Types.ObjectId,ref:"user",required:true},
    postId:{type:mongoose.Types.ObjectId,ref:"post",required:true}
    
 })

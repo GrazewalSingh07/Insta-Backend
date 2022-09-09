@@ -1,10 +1,12 @@
 const connect = require("./configs/db");
 const app = require("./index");
+require("dotenv").config()
+const PORT=process.env.PORT
 
-app.listen(5000,async(req,res)=>{
+app.listen(PORT,()=>{
     try {
-        await connect()
-        console.log("Connected to Instagram server")
+         connect()
+        console.log("http://localhost:4000")
     } catch (error) {
         console.log(error);
     }
